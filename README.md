@@ -2,6 +2,8 @@
 
 Chun Shiang Liu
 
+print("Hello World")
+
 # This is a large heading. 
 This is a paragraph. Text goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -46,9 +48,24 @@ This is a block quote. It should be in block quotes! Lorem ipsum dolor sit amet,
 
 Inline code: make this word inline. 
 
-This is a large heading. 
+# This is a large heading. 
 
 Format this text as code. 
+```
 def foo():
     if not bar:
         return True
+```
+
+        
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://upload.wikimedia.org/wikipedia/commons/0/03/Kismet-IMG_6007-black.jpg)
+
+|`Number`|`Color`|`Size`| 
+|       1| White |  10  |
+|2       | Black |  35  |
+|   3    | Blue  |  50  | 
+
+```
+def my_function():
+  print("Hello from a function")
+```
