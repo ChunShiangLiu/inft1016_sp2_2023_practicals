@@ -2,23 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 3 Web Page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="base.css">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <html> 
-  <head>
-    <title>Assignment 3 Web Page</title>
-    <!-- Add link to CSS file here -->
-  </head>
-
-  <body> 
+  <header onload="loadThemePreference()">
+    <h1 id="heading">Header</h1>
+    <button onclick="toggleTheme()">Toggle Theme</button>
+  </header>
+  
+  <header>
     <h1>Welcome to My Web Page</h1>
-    <h1>Software and applications programming</h1>
+    <h1>Software and applications programming in Medicine</h1>
     <!-- Add content here -->
      <!-- Image and paragraph section -->
+    <button onclick="toggleTheme()">Toggle Theme</button>
+    <title>Assignment 3 Web Page</title>
+    <!-- Add link to CSS file here -->
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Our team</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <form>
+      <input type="text" name="user_name" placeholder="Enter your name!" id="nameInput">
+      <button type="submit" onclick="updateHeading(event)">Apply!</button>
+    </form>
+  </nav>
+  <main>
+    <article>
+      <h2>Article heading</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+      <h3>Subsection</h3>
+      <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
+      <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+      <h3>Another subsection</h3>
+      <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+      <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
+    </article>
+    
+    <aside>
+      <h2>Related</h2>
+      <ul>
+        <li><a href="#">Oh I do like to be beside the seaside</a></li>
+        <li><a href="#">Oh I do like to be beside the sea</a></li>
+        <li><a href="#">Although in the North of England</a></li>
+        <li><a href="#">It never stops raining</a></li>
+        <li><a href="#">Oh well...</a></li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <p>&copy; 2050 by nobody. All rights reversed.</p>
+  </footer>
+</body>
+</html
   <div>
     <img id="main-image" src="https://openverse.org/image/e2049614-f186-4d07-819a-c96028b0d007?q=trees" alt="Japanese Garden Tree">
     <p id="image-info">"Famous Japanese Garden Tree in Portland by Michael Matti" by Michael Matti is licensed under CC BY-NC 2.0. To view a copy of this license, visit <a href="https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse">https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse</a>.</p>
@@ -33,16 +76,6 @@
     <button class="image-button" onclick="changeImage(this)">Mangroves</button>
   </div>
 
-  
-
-    <script src="script.js"></script>
-  
-
-    
-
-
-
-
-
-</body>
+  <script src="script.js"></script>
+  </body>
 </html>
