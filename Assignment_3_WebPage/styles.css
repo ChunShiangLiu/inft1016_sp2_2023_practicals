@@ -1,0 +1,14 @@
+/* Add your CSS styles for light mode here */
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Add your CSS styles for dark mode here */
+  
+  body.dark-mode {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+  
