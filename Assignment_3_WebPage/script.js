@@ -30,3 +30,4 @@ function toggleMode() {
   // Call the displayDateTime function to show the current date and time
   displayDateTime();
   
+  
