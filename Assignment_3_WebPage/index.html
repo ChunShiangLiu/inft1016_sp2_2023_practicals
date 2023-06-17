@@ -26,14 +26,16 @@
   <body>
     <header>
       <h1 id="heading">Welcome to Software and Applications Programming in Medicine</h1>
-    </header>
-    <main>
       <label for="name-input">Enter your name:</label>
       <input id="name-input" type="text">
+      <body onload="updateHeading()"></body>
       <p id="datetime"></p>
-
       <button onclick="toggleTheme()">Toggle Theme</button>
-      <script src="script.js"></script>
+      <script src="script.js"></script>      
+
+    </header>
+    <main> 
+       
       <h1>Image Gallery</h1>
       <img id="displayedImg" src="https://openverse.org/image/e2049614-f186-4d07-819a-c96028b0d007?q=trees" alt="Japanese Garden Tree">
       <p id="photographer">"Famous Japanese Garden Tree in Portland" by Michael Matti</p>
@@ -83,7 +85,7 @@
     // Function to update the heading with the user's name
     function updateHeading() {
       const name = localStorage.getItem("name") || "Guest";
-      document.querySelector("h1").textContent = `Welcome to Software and Applications Programming in Medicine, ${name}!`;
+      document.querySelector("h1").textContent = `Welcome to Software and Applications Programming in Medicine,${name}!`;
     }
 
     // Function to display the current date and time

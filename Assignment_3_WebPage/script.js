@@ -70,3 +70,12 @@ function displayDateTime() {
 // Call the function to display the date and time when the page loads
 displayDateTime();
 
+function updateHeading() {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const userName = urlParams.get('user_name');
+  const headingElement = document.getElementById('heading');
+  headingElement.textContent = `Hello, ${userName}`;
+}
+
+
