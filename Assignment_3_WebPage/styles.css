@@ -1,32 +1,24 @@
+:root {
+  --primary-color: rgb(255, 255, 255);
+  --secondary-color: rgb(200, 200, 200);
+  --bg-color: rgb(240, 240, 240);
+  --font-color: rgb(30, 30, 30);
+  --heading-color: rgb(50, 50, 50);
+}
+
+[data-theme="dark"] {
+  --primary-color: rgb(0, 0, 0);
+  --secondary-color: rgb(50, 50, 50);
+  --bg-color: rgb(20, 20, 20);
+  --font-color: rgb(200, 200, 200);
+  --heading-color: rgb(150, 150, 150);
+}
+
 body {
-  font-family: sans-serif;
-  }
-  
-  h1 {
-  text-align: center;
-  }
-  
-  #mode-toggle {
-  display: flex;
-  justify-content: space-between;
-  }
-  
-  #light-mode, #dark-mode {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 10px;
-  cursor: pointer;
-  }
-  
-  #light-mode:hover, #dark-mode:hover {
-  background-color: #ddd;
-  }
-  
-  #name {
-  width: 200px;
-  }
-  
-  #date-time {
-  font-size: 16px;
-  }
-  
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+h1, h2, h3 {
+  color: var(--heading-color);
+}

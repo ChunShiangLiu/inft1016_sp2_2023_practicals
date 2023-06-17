@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 3 Web Page</title>
-    <link rel="stylesheet" href="base.css">  
+    <link rel="stylesheet" href="base.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+      // JavaScript code from Part 1
+      // Place your JavaScript code here
+    </script>
     <style id="theme">
       /* Light Mode CSS */
       body {
@@ -24,9 +27,7 @@
       <h1>Welcome to Software and Applications Programming in Medicine</h1>
       <label for="name-input">Enter your name:</label>
       <input id="name-input" type="text">
-      
       <p id="datetime"></p>
-      
       <button id="theme-toggle">Toggle Theme</button>
     
     </header>
@@ -71,22 +72,20 @@
         document.body.classList.add(storedTheme === "Dark Mode" ? "dark-mode" : "");
       }
     </script>
-  <nav>
-    
+  <nav> 
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Projects</a></li>
       <li><a href="#">Contact</a></li>
       <li><a href="#">Search</a></li>
     </ul>
-    
   </nav>
   <main>
     <section>
       <h2>Welcome to My Web Page</h2>
       <h3>Software and Applications Programming in Medicine</h3>
       <!-- Add content here -->
-      <img style="display: block;-webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://www.articleevent.com/wp-content/uploads/2020/04/Technology-advancement-in-the-healthcare-industry.jpg"> 
+      <img style="display: block; -webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://www.articleevent.com/wp-content/uploads/2020/04/Technology-advancement-in-the-healthcare-industry.jpg"> 
 
       <!-- Buttons section -->
       <div>
@@ -98,17 +97,25 @@
       </div>
     </section>
 
-    <section>
-      <h2>Article heading</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
-      <h3>Subsection</h3>
-      <p>Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.</p>
-      <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit      amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
-      <h3>Another subsection</h3>
-      <p>Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum soclis natoque penatibus et manis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-      <p>Vivamus fermentum semper porta. Nunc diam velit, adipscing ut tristique vitae sagittis vel odio. Maecenas convallis ullamcorper ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, is fringille sem nunc vet mi.</p>
-    </section>
-    
+    <article>
+                  <h2>Article heading</h2>
+      <p>Software and applications programming in medicine is an exciting field that combines the latest advances in technology with the needs of healthcare professionals and patients. Some of the key areas of focus in this field include:</p>
+      <ul>
+				<li>Electronic health records (EHRs)</li>
+				<li>Medical imaging and analysis software</li>
+				<li>Telemedicine and remote patient monitoring systems</li>
+				<li>Mobile health (mHealth) apps for patients and providers</li>
+				<li>Artificial intelligence (AI) and machine learning (ML) for medical diagnosis and treatment planning</li>
+			</ul>
+      <p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+
+			<h3>Another Subsection</h3>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur.</p>
+
+			<p>Pelientesque auctor nisi id magna consequat sagittis. Curabitur dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.</p>
+
+    </article>
     <aside>
       <h2>Related</h2>
       <ul>
