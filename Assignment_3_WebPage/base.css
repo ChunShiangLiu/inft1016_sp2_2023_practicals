@@ -1,0 +1,39 @@
+/* Add your CSS styles for light mode here */
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Add your CSS styles for dark mode here */
+  
+  body.dark-mode {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(200, 200, 200);
+    --bg-color: rgb(240, 240, 240);
+    --font-color: rgb(30, 30, 30);
+    --heading-color: rgb(50, 50, 50);
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(50, 50, 50);
+    --bg-color: rgb(20, 20, 20);
+    --font-color: rgb(200, 200, 200);
+    --heading-color: rgb(150, 150, 150);
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+  }
+  
+  h1, h2, h3 {
+    color: var(--heading-color);
+  }
+  
