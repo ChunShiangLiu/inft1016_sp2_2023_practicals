@@ -77,5 +77,47 @@ function updateHeading() {
   const headingElement = document.getElementById('heading');
   headingElement.textContent = `Hello, ${userName}`;
 }
+window.onload = function() {
+  const themePreference = localStorage.getItem('theme');
+  if (themePreference === 'dark') {
+    // Apply dark theme styles
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    // Apply light theme styles (default)
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+}
+function toggleTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  
+  // Apply the new theme styles
+  document.documentElement.setAttribute('data-theme', newTheme);
+  
+  // Store the theme preference in local storage
+  localStorage.setItem('theme', newTheme);
+}
+window.onload = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('user_name')) {
+    const userName = urlParams.get('user_name');
+    localStorage.setItem('user_name', userName);
+  } else {
+    const storedUserName = localStorage.getItem('user_name');
+    if (storedUserName) {
+      // Use the stored user name
+      document.getElementById('name-input').value = storedUserName;
+    }
+  }
+}
+window.onload = function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.has('user_name')) {
+    const userName = urlParams.get('user_name');
+    localStorage.setItem('user_name', userName);
+  }
+  // Rest of the code...
+}
+
 
 
