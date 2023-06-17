@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Assignment 3 Web Page</title>
-    <link rel="stylesheet" type="text/css" href="base.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="base.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
       // JavaScript code from Part 1
       // Place your JavaScript code here
     </script>
     <style id="theme">
+      
       /* Light Mode CSS */
       body {
       background-color: #eae9e5;
@@ -24,16 +25,52 @@
   </head>
   <body>
     <header>
-      <header role="banner">
-      <h1>Welcome to Software and Applications Programming in Medicine</h1>
+      <h1 id="heading">Welcome to Software and Applications Programming in Medicine</h1>
+    </header>
+    <main>
       <label for="name-input">Enter your name:</label>
       <input id="name-input" type="text">
-  
       <p id="datetime"></p>
-  
-      <button id="theme-toggle">Toggle Theme</button>
-    
-    </header>
+
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <script src="script.js"></script>
+      <h1>Image Gallery</h1>
+      <img id="displayedImg" src="https://openverse.org/image/e2049614-f186-4d07-819a-c96028b0d007?q=trees" alt="Japanese Garden Tree">
+      <p id="photographer">"Famous Japanese Garden Tree in Portland" by Michael Matti</p>
+
+      <h2>Select an Image:</h2>
+      <button class="imgButton" data-imgsrc="https://openverse.org/image/e2049614-f186-4d07-819a-c96028b0d007?q=trees">Japanese Garden Tree</button>
+      <button class="imgButton" data-imgsrc="https://openverse.org/image/bc3938ee-5cdd-48f5-a808-a8d441904bd3?q=trees">Ceiba Tree</button>
+      <button class="imgButton" data-imgsrc="https://openverse.org/image/f1230075-5ab6-45c3-a027-87bf0874a714?q=trees">Ancient Olive Trees</button>
+      <button class="imgButton" data-imgsrc="https://openverse.org/image/b7313e95-498b-4917-9a2b-7fd50f072bfe?q=trees">Palm tree</button>
+      <button class="imgButton" data-imgsrc="https://openverse.org/image/752085e7-81bb-473c-a0fc-2f19fa977345?q=mangrove">Mangroves</button>
+  </main>
+  <script>
+    const displayedImg = document.getElementById("displayedImg");
+    const photographer = document.getElementById("photographer");
+    const imgButtons = document.querySelectorAll(".imgButton");
+
+    // Set the initial image and photographer
+    displayedImg.src = "https://openverse.org/image/e2049614-f186-4d07-819a-c96028b0d007?q=trees";
+    photographer.textContent = '"Famous Japanese Garden Tree in Portland" by Michael Matti';
+
+    // Add click event listeners to the image buttons
+    imgButtons.forEach(button => {
+        button.addEventListener("click", changeImage);
+    });
+
+    // Function to change the displayed image and photographer
+    function changeImage(event) {
+        const button = event.target;
+        const imgSrc = button.getAttribute("data-imgsrc");
+        const imgAlt = button.textContent;
+        const imgPhotographer = button.getAttribute("data-photographer");
+
+        displayedImg.src = imgSrc;
+        displayedImg.alt = imgAlt;
+        photographer.textContent = imgPhotographer;
+    }
+    </script>
     <script>
       // Function to toggle between light and dark mode
       function toggleTheme() {
@@ -75,6 +112,7 @@
       document.body.classList.add(storedTheme === "Dark Mode" ? "dark-mode" : "");
     }
     </script>
+    
   <nav> 
     <ul>
       <li><a href="#">Home</a></li>
@@ -84,65 +122,46 @@
     </ul>
   </nav>
   <main>
-    <section>
-      <h2>Welcome to My Web Page</h2>
-      <h3>Software and Applications Programming in Medicine</h3>
-      <!-- Add content here -->
-      <img style="display: block; -webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://www.articleevent.com/wp-content/uploads/2020/04/Technology-advancement-in-the-healthcare-industry.jpg">
-      <p>This is a description of the image.</p> 
-
-      <!-- Buttons section -->
-      <div>
-        <button class="image-button" onclick="changeImage(this)">Software Medical Technology</button>
-        <button class="image-button" onclick="changeImage(this)">Ceiba Tree</button>
-        <button class="image-button" onclick="changeImage(this)">Ancient Olive Trees</button>
-        <button class="image-button" onclick="changeImage(this)">Palm tree</button>
-        <button class="image-button" onclick="changeImage(this)">Mangroves</button>
-      </div>
     
-    </section>
-
     <article>
       <h2>Benefits of Software and Applications Programming in Medicine.</h2>
       <p>Software and applications programming in medicine is an exciting field that combines the latest advances in technology with the needs of healthcare professionals and patients. Some of the key areas of focus in this field include:</p>
-      <img src="https://www.qa-systems.com/wp-content/uploads/2021/05/software-drives-advances-in-medical-technology-image-e1620894758775.png" alt="Image" width="300" height="200">
-      <ul>
-				<li>Electronic health records (EHRs)</li>
-				<li>Medical imaging and analysis software</li>
-				<li>Telemedicine and remote patient monitoring systems</li>
-				<li>Mobile health (mHealth) apps for patients and providers</li>
-				<li>Artificial intelligence (AI) and machine learning (ML) for medical diagnosis and treatment planning</li>
-			</ul>
-      <p>Electronic Health Record (EHR) systems are instrumental in storing and managing patient health information, offering real-time access to medical records, medication history, and lab results. This enhances patient safety and improves care coordination. Additionally, the use of software algorithms in medical imaging and diagnostic tools has led to improved analysis and interpretation of radiological scans, pathology slides, and other diagnostic imaging, resulting in faster and more accurate diagnoses.</p>
+        <ul>
+          <li>Electronic health records (EHRs)</li>
+          <li>Medical imaging and analysis software</li>
+          <li>Telemedicine and remote patient monitoring systems</li>
+          <li>Mobile health (mHealth) apps for patients and providers</li>
+          <li>Artificial intelligence (AI) and machine learning (ML) for medical diagnosis and treatment planning</li>
+			  </ul>
+        <p>Electronic Health Record (EHR) systems are instrumental in storing and managing patient health information, offering real-time access to medical records, medication history, and lab results. This enhances patient safety and improves care coordination. Additionally, the use of software algorithms in medical imaging and diagnostic tools has led to improved analysis and interpretation of radiological scans, pathology slides, and other diagnostic imaging, resulting in faster and more accurate diagnoses.</p>
 
 			<h3>Role of Software in Medicine</h3>
-			<p>The use of software and applications in the field of medicine brings several benefits. Research indicates that these technologies enhance efficiency and accuracy by streamlining administrative tasks, automating processes, and minimizing human errors. They also improve patient care through better monitoring, diagnosis, and treatment planning. Additionally, software and applications enable seamless data integration, allowing healthcare providers to securely access and share patient information, promoting collaboration and continuity of care. These technologies also facilitate research and analytics, providing valuable insights for evidence-based medicine and decision-making.</p>
+        <p>The use of software and applications in the field of medicine brings several benefits. Research indicates that these technologies enhance efficiency and accuracy by streamlining administrative tasks, automating processes, and minimizing human errors. They also improve patient care through better monitoring, diagnosis, and treatment planning. Additionally, software and applications enable seamless data integration, allowing healthcare providers to securely access and share patient information, promoting collaboration and continuity of care. These technologies also facilitate research and analytics, providing valuable insights for evidence-based medicine and decision-making.</p>
 
-      <h4>Application Programming in Medicine.</h4>
-      <p>The role of application programming in healthcare. It highlights the benefits of mobile health applications in patient engagement and remote care delivery. It also discusses the use of clinical decision support systems to help healthcare professionals make informed decisions. Furthermore, it covers health data analytics and its importance in improving patient outcomes and population health management. The tone of voice is friendly.</p>
+        <h4>Application Programming in Medicine.</h4>
+        <p>The role of application programming in healthcare. It highlights the benefits of mobile health applications in patient engagement and remote care delivery. It also discusses the use of clinical decision support systems to help healthcare professionals make informed decisions. Furthermore, it covers health data analytics and its importance in improving patient outcomes and population health management. The tone of voice is friendly.</p>
 
-    </article>
-    <aside>
-      <h2>Related</h2>
-      <ul>
-        <li><a href="#">Oh I do like to be beside the seaside</a></li>
-        <li><a href="#">Oh I do like to be beside the sea</a></li>
-        <li><a href="#">Although in the North of England</a></li>
-        <li><a href="#">It never stops raining</a></li>
-        <li><a href="#">Oh well...</a></li>
-      </ul>
+      </article>
+      <aside>
+        <h2>Related</h2>
+        <ul>
+          <li><a href="#">Oh I do like to be beside the seaside</a></li>
+          <li><a href="#">Oh I do like to be beside the sea</a></li>
+          <li><a href="#">Although in the North of England</a></li>
+          <li><a href="#">It never stops raining</a></li>
+          <li><a href="#">Oh well...</a></li>
+        </ul>
 
-      <table border="10" cellpaddings="10" cellspacing="0">
-        <th></th>
+        <table border="10" cellpaddings="10" cellspacing="0">
+         <th></th>
 
 
-      </table>
-    </aside>
-    <script src="script.js"></script>
-  </main>
-  <footer>
-    <p>&copy; 2023 by Chun Shiang Liu. All rights reversed.</p>
-  </footer>
-</body>
+        </table>
+      </aside>
+    </main>
+    <footer>
+      <p>&copy; 2023 by Chun Shiang Liu. All rights reversed.</p>
+    </footer>
+  </body>
 </html>
 
