@@ -37,8 +37,8 @@ function changeImage(button) {
   // Map button text to corresponding image URL and information
   var imageMap = {
     "Japanese Garden Tree": {
-      url: "https://openverse.org/image/e2049614-f186-4d07-819a-c96028b0d007?q=trees",
-      info: '"Famous Japanese Garden Tree in Portland by Michael Matti" by Michael Matti is licensed under CC BY-NC 2.0. To view a copy of this license, visit <a href="https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse">https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse</a>.'
+      url: "https://www.qa-systems.com/blog/software-drives-advances-in-medical-technology/",
+      info: 'Software Drives Advances in Medical Technology'
     },
     "Ceiba Tree": {
       url: "https://openverse.org/image/bc3938ee-5cdd-48f5-a808-a8d441904bd3?q=trees",
