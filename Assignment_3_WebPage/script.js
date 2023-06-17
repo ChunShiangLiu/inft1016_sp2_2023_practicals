@@ -20,4 +20,14 @@ function toggleTheme() {
   
   // Run the displayDateTime function when the page loads
   window.addEventListener('load', displayDateTime);
+  function updateHeading() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const userName = urlParams.get('user_name');
+    const greetingElement = document.getElementById('greeting');
   
+    if (userName) {
+      greetingElement.textContent = `Hello, ${userName}`;
+    }
+  }
+    
