@@ -1,37 +1,32 @@
-/* Add your CSS styles for light mode here */
-
 body {
-    background-color: #ffffff;
-    color: #000000;
+  font-family: sans-serif;
   }
   
-  /* Add your CSS styles for dark mode here */
-  
-  body.dark-mode {
-    background-color: #1f1f1f;
-    color: #ffffff;
-  }
-  
-  :root {
-    --primary-color: rgb(255, 255, 255);
-    --secondary-color: rgb(220, 220, 220);
-    --bg-color: rgb(240, 240, 240);
-    --font-color: rgb(50, 50, 50);
-    --heading-color: rgb(80, 80, 80);
-  }
-  
-  [data-theme="dark"] {
-    --primary-color: rgb(0, 0, 0);
-    --secondary-color: rgb(30, 30, 30);
-    --bg-color: rgb(20, 20, 20);
-    --font-color: rgb(200, 200, 200);
-    --heading-color: rgb(160, 160, 160);
-  }
   h1 {
-    color: var(--heading-color);
+  text-align: center;
   }
   
-  body {
-    background-color: var(--bg-color);
+  #mode-toggle {
+  display: flex;
+  justify-content: space-between;
   }
-    
+  
+  #light-mode, #dark-mode {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  }
+  
+  #light-mode:hover, #dark-mode:hover {
+  background-color: #ddd;
+  }
+  
+  #name {
+  width: 200px;
+  }
+  
+  #date-time {
+  font-size: 16px;
+  }
+  
