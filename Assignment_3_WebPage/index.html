@@ -5,12 +5,7 @@
     <title>Assignment 3 Web Page</title>
     <link rel="stylesheet" href="base.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-      // JavaScript code from Part 1
-      // Place your JavaScript code here
-    </script>
     <style id="theme">
-      
       /* Light Mode CSS */
       body {
       background-color: #eae9e5;
@@ -21,7 +16,6 @@
       background-color: #5d5c5c;
       color: #f5f5f5;
     }
-
     .displayImg{
       display: block;
     }
@@ -33,18 +27,14 @@
   <body>
     <header>
       <h1 id="heading">Welcome to Software and Applications Programming in Medicine</h1>
-      <body onload="updateHeading()"></body>
       <p id="datetime"></p>
-      <button onclick="toggleTheme()">Toggle Theme</button>
-      <script src="script.js"></script>      
-      
+      <button onclick="toggleTheme()">Toggle Theme</button>    
     </header>
     <main> 
-       
       <h1>Image Gallery</h1>
       <div id="imgWrapper">
-        <img decoding="async" width="1024" height="333" class="wp-image-516" src="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png" alt="" srcset="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png 1024w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-300x97.png 300w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-768x249.png 768w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1536x499.png 1536w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2.png 1894w" sizes="(max-width: 1024px) 100vw, 1024px">
-        <img class="healthOnlie" src="https://th.bing.com/th/id/OIP.4FSXmYBsJ4qYGj5z9Ug7VwHaEK?pid=ImgDet&rs=1" />
+        <img id="displayedImg" decoding="async" width="1024" height="333" class="wp-image-516" src="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png" alt="" srcset="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png 1024w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-300x97.png 300w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-768x249.png 768w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1536x499.png 1536w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2.png 1894w" sizes="(max-width: 1024px) 100vw, 1024px">
+        <img id="healthOnlineImg" class="healthOnline" src="https://th.bing.com/th/id/OIP.4FSXmYBsJ4qYGj5z9Ug7VwHaEK?pid=ImgDet&rs=1" alt="Health Online Education">
         <img />
         <img />
         <img />
@@ -52,11 +42,11 @@
       </div>
       <p id="photographer">Software and Applications Programming in Medicine</p>
       <h2>Select an Image:</h2>
-      <button class="imgButton" onclick="toggleImg()" data-imgsrc="(https://th.bing.com/th/id/OIP.4FSXmYBsJ4qYGj5z9Ug7VwHaEK?pid=ImgDet&rs=1)">Health Online Education</button>
-      <button class="imgButton" onclick="toggleImg()" data-imgsrc="(https://klinikhealthcaresolutions.com/wp-content/webp-express/webp-images/uploads/2020/10/PATIENT_FLOW.png.webp)">Telemedicine</button>
-      <button class="imgButton" onclick="toggleImg()" data-imgsrc="(https://www.med-technews.com/downloads/1984/download/medical%20software.jpg?cb=c17e2dc1a09cc0e8600fa3d1f07f8364&w=1000&h=)">Software integrator</button>
-      <button class="imgButton" onclick="toggleImg()" data-imgsrc="https://i.pcmag.com/imagery/articles/07hvrQ735E3z9Tz68gsfDDF-2.fit_lim.size_1600x900.v1569490762.jpg">Body Computing</button>
-      <button class="imgButton" onclick="toggleImg()" data-imgsrc="https://www.uchicagomedicine.org/-/media/images/ucmc/forefront/general/universal/doctor-software-laptop-universal.jpg?h=385&as=1&hash=7EC0B6FD06D6765560A7C7E932A96638">Software algorithms</button>
+      <button class="imgButton" onclick="toggleImg(https://th.bing.com/th/id/OIP.4FSXmYBsJ4qYGj5z9Ug7VwHaEK?pid=ImgDet&rs=1)">Health Online Education</button>
+      <button class="imgButton" onclick="toggleImg(https://klinikhealthcaresolutions.com/wp-content/webp-express/webp-images/uploads/2020/10/PATIENT_FLOW.png.webp)">Telemedicine</button>
+      <button class="imgButton" onclick="toggleImg(https://www.med-technews.com/downloads/1984/download/medical%20software.jpg?cb=c17e2dc1a09cc0e8600fa3d1f07f8364&w=1000&h=)">Software integrator</button>
+      <button class="imgButton" onclick="toggleImg(https://i.pcmag.com/imagery/articles/07hvrQ735E3z9Tz68gsfDDF-2.fit_lim.size_1600x900.v1569490762.jpg)">Body Computing</button>
+      <button class="imgButton" onclick="toggleImg(https://www.uchicagomedicine.org/-/media/images/ucmc/forefront/general/universal/doctor-software-laptop-universal.jpg?h=385&as=1&hash=7EC0B6FD06D6765560A7C7E932A96638)">Software algorithms</button>
   </main>
   <script>
     const displayedImg = document.getElementById("displayedImg");
