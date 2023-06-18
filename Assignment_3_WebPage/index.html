@@ -1,149 +1,154 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Assignment 3 Web Page</title>
-    <link rel="stylesheet" href="base.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // JavaScript code from Part 1
+      // Place your JavaScript code here
+    </script>
     <style id="theme">
       /* Light Mode CSS */
       body {
-      background-color: #eae9e5;
-      color: #333;
-    }
-    /* Dark Mode CSS */
-    body.dark-mode {
-      background-color: #5d5c5c;
-      color: #f5f5f5;
-    }
-    .displayImg{
-      display: block;
-    }
-    .healthOnlie {
-      display: none;
-    }
+        background-color: #eae9e5;
+        color: #333;
+      }
+      /* Dark Mode CSS */
+      body.dark-mode {
+        background-color: #494848;
+        color: #f5f5f5;
+      }
     </style>
   </head>
   <body>
     <header>
-      <h1 id="heading">Welcome to Software and Applications Programming in Medicine</h1>
+      <h1 id="heading">
+        Welcome to Software and Applications Programming in Medicine! <span id="displayUserName"></span>
+      </h1>
+
       <p id="datetime"></p>
-      <button onclick="toggleTheme()">Toggle Theme</button>    
+      <button onclick="toggleTheme()">Toggle Theme</button>
+      <script src="script.js"></script>
     </header>
-    <main> 
-      <h1>Image Gallery</h1>
-      <div id="imgWrapper">
-        <img id="displayedImg" decoding="async" width="1024" height="333" class="wp-image-516" src="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png" alt="" srcset="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png 1024w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-300x97.png 300w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-768x249.png 768w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1536x499.png 1536w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2.png 1894w" sizes="(max-width: 1024px) 100vw, 1024px">
-        <img id="healthOnlineImg" class="healthOnline" src="https://th.bing.com/th/id/OIP.4FSXmYBsJ4qYGj5z9Ug7VwHaEK?pid=ImgDet&rs=1" alt="Health Online Education">
-        <img />
-        <img />
-        <img />
-        <img />
-      </div>
+    <main>
+      <h2>Image Gallery</h2>
+      <img
+        height="333"
+        id="displayImage"
+        src="img/HealthAndMedicine.png"
+        {# src="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png" #}
+        alt=""
+      />
       <p id="photographer">Software and Applications Programming in Medicine</p>
-      <h2>Select an Image:</h2>
-      <button class="imgButton" onclick="toggleImg(https://th.bing.com/th/id/OIP.4FSXmYBsJ4qYGj5z9Ug7VwHaEK?pid=ImgDet&rs=1)">Health Online Education</button>
-      <button class="imgButton" onclick="toggleImg(https://klinikhealthcaresolutions.com/wp-content/webp-express/webp-images/uploads/2020/10/PATIENT_FLOW.png.webp)">Telemedicine</button>
-      <button class="imgButton" onclick="toggleImg(https://www.med-technews.com/downloads/1984/download/medical%20software.jpg?cb=c17e2dc1a09cc0e8600fa3d1f07f8364&w=1000&h=)">Software integrator</button>
-      <button class="imgButton" onclick="toggleImg(https://i.pcmag.com/imagery/articles/07hvrQ735E3z9Tz68gsfDDF-2.fit_lim.size_1600x900.v1569490762.jpg)">Body Computing</button>
-      <button class="imgButton" onclick="toggleImg(https://www.uchicagomedicine.org/-/media/images/ucmc/forefront/general/universal/doctor-software-laptop-universal.jpg?h=385&as=1&hash=7EC0B6FD06D6765560A7C7E932A96638)">Software algorithms</button>
-  </main>
-  <script>
-    const displayedImg = document.getElementById("displayedImg");
-    const photographer = document.getElementById("photographer");
-    const imgButtons = document.querySelectorAll(".imgButton");
-
-    // Set the initial image and photographer
-    displayedImg.src = "https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png" alt="" srcset="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png 1024w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-300x97.png 300w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-768x249.png 768w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1536x499.png 1536w, https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2.png 1894w" sizes="(max-width: 1024px) 100vw, 1024px";
-    photographer.textContent = 'Software and Applications Programming in Medicine';
-
-    // Add click event listeners to the image buttons
-    imgButtons.forEach(button => {
-        button.addEventListener("click", changeImage);
-    });
-    // Function to change the displayed image and photographer
-    function changeImage(event) {
-    const button = event.target;
-    const imgSrc = button.getAttribute("data-imgsrc");
-    const imgAlt = button.textContent;
-    const imgPhotographer = button.getAttribute("data-photographer");
-
-    displayedImg.src = imgSrc;
-    displayedImg.alt = imgAlt;
-    photographer.textContent = imgPhotographer;
-}
-
-const healthOnlieImg = document.getElementsByClassName(".healthOnlie")
-healthOnlieImg.classList.remove("healthOnlie")
-healthOnlieImg.classList.add("displayImg")
-    
-        const healthOnlieImg = document.getElementsByClassName(".healthOnlie")
-        healthOnlieImg.classList.remove("healthOnlie")
-        healthOnlieImg.classList.add("displayImg")
-
-    </script>
+      <h2>Image Selection:</h2>
+      <button
+        class="imgButton"
+        onclick="toggleImg('img/HealthOnlineEducation.jpeg')"
+        {# data-imgsrc="(https://th.bing.com/th/id/OIP.4FSXmYBsJ4qYGj5z9Ug7VwHaEK?pid=ImgDet&rs=1)" #}
+      >
+        Health Online Education
+      </button>
+      <button
+        class="imgButton"
+        onclick="toggleImg('img/Telemedicine.webp')"
+        {# data-imgsrc="(https://klinikhealthcaresolutions.com/wp-content/webp-express/webp-images/uploads/2020/10/PATIENT_FLOW.png.webp)" #}
+      >
+        Telemedicine
+      </button>
+      <button
+        class="imgButton"
+        onclick="toggleImg('img/SoftwareIntegrator.jpeg')"
+        {# data-imgsrc="(https://www.med-technews.com/downloads/1984/download/medical%20software.jpg?cb=c17e2dc1a09cc0e8600fa3d1f07f8364&w=1000&h=)" #}
+      >
+        Software integrator
+      </button>
+      <button
+        class="imgButton"
+        onclick="toggleImg('img/BodyComputing.jpg')"
+        {# data-imgsrc="https://i.pcmag.com/imagery/articles/07hvrQ735E3z9Tz68gsfDDF-2.fit_lim.size_1600x900.v1569490762.jpg" #}
+      >
+        Body Computing
+      </button>
+      <button
+        class="imgButton"
+        onclick="toggleImg('img/SoftwareAlgorithms.jpeg')"
+        {# data-imgsrc="https://www.uchicagomedicine.org/-/media/images/ucmc/forefront/general/universal/doctor-software-laptop-universal.jpg?h=385&as=1&hash=7EC0B6FD06D6765560A7C7E932A96638" #}
+      >
+        Software algorithms
+      </button>
+    </main>
     <script>
       // Function to toggle between light and dark mode
       function toggleTheme() {
-      const body = document.body;
-      body.classList.toggle("dark-mode");
-      const theme = body.classList.contains("dark-mode") ? "Dark Mode" : "Light Mode";
-      localStorage.setItem("theme", theme);
-    }
+        const body = document.body;
+        body.classList.toggle("dark-mode");
+        const theme = body.classList.contains("dark-mode")
+          ? "Dark Mode"
+          : "Light Mode";
+        localStorage.setItem("theme", theme);
+      }
 
-    // Function to update the heading with the user's name
-    function updateHeading() {
-      const name = localStorage.getItem("name");
-      document.querySelector("h1").textContent = `Hello, Welcome to Software and Applications Programming in Medicine ${name}!`;
-    }
+      function displayDateTime() {
+        const now = new Date();
+        const dateTimeString = now.toLocaleString();
+        document.querySelector(
+          "#datetime"
+        ).textContent = `Current Date and Time: ${dateTimeString}`;
+      }
 
-    // Function to display the current date and time
-    function displayDateTime() {
-      const now = new Date();
-      const dateTimeString = now.toLocaleString();
-      document.querySelector("#datetime").textContent = `Current Date and Time: ${dateTimeString}`;
-    }
+      // Event listener for theme toggle button
+      document
+        .querySelector("#theme-toggle")
+        .addEventListener("click", toggleTheme);
+      displayDateTime();
 
-    // Event listener for theme toggle button
-    document.querySelector("#theme-toggle").addEventListener("click", toggleTheme);
-
-    // Event listener for name input
-    document.querySelector("#name-input").addEventListener("input", function(e) {
-      localStorage.setItem("name", e.target.value);
-      updateHeading();
-    });
-
-    // Initial setup when the page loads
-    updateHeading();
-    displayDateTime();
-    
-    // Check if a theme preference is stored in local storage
-    const storedTheme = localStorage.getItem("theme");
-    if (storedTheme) {
-      document.body.classList.add(storedTheme === "Dark Mode" ? "dark-mode" : "");
-    }
+      // Check if a theme preference is stored in local storage
+      const storedTheme = localStorage.getItem("theme");
+      if (storedTheme) {
+        document.body.classList.add(
+          storedTheme === "Dark Mode" ? "dark-mode" : ""
+        );
+      }
     </script>
-    
-  <nav> 
-    <ul>
-      <li><a href="file:///C:/Users/Jason/OneDrive/Desktop/inft1016_sp2_2023_practicals-main/inft1016_sp2_2023_practicals-1/Assignment_3_WebPage/index.html">Home</a></li>
-      <li><a href="https://github.com/ChunShiangLiu/inft1016_sp2_2023_practicals/blob/main/Assignment_3_WebPage/README.md">Projects</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="https://www.google.com/">Search</a></li>
-    </ul>
-    <form>
-      <input type="text" name="user_name" placeholder="Enter your name!">
-      <button type="submit">Apply!</button>
-    </form>
-  </nav>
-  <main>
-    
-    <article>
-      <h1><b>Software and Applications Programming in Medicine</b></h1>
-      <blockquote>" Fun fact: We must have equity and improving the health of everyone as explicit goals and then build the systems toward those goals."</blockquote>                
 
-      <h2><b>Introduction</b></h2>
-      <p>The healthcare industry needs advanced technology solutions to address its challenges. A project for software and application programming in medicine aims to create innovative software that enhances patient care, streamlines medical workflows and supports medical research and analysis. This field merges technology and healthcare needs, focusing on key areas such as patient care and medical research.</p>
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="file:///C:/Users/Jason/OneDrive/Desktop/inft1016_sp2_2023_practicals-main/inft1016_sp2_2023_practicals-1/Assignment_3_WebPage/index.html"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/ChunShiangLiu/inft1016_sp2_2023_practicals/blob/main/Assignment_3_WebPage/README.md"
+            >Projects</a
+          >
+        </li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="https://www.google.com/">Search</a></li>
+      </ul>
+
+      <form>
+        <input type="text" name="user_name" placeholder="Enter your name!" />
+        <button type="submit">Apply!</button>
+      </form>
+
+      <div>
+        <input type="text" id="userName" placeholder="Enter your name!" />
+        <button onclick="changeText()" type="submit">Apply!</button>
+      </div>
+
+    </nav>
+    <main>
+      <article>
+        <h1><b>Software and Applications Programming in Medicine</b></h1>
+        <blockquote>" Fun fact: We must have equity and improving the health of everyone as explicit goals and then build the systems toward those goals."</blockquote>                
+
+        <h2><b>Introduction</b></h2>
+        <p>The healthcare industry needs advanced technology solutions to address its challenges. A project for software and application programming in medicine aims to create innovative software that enhances patient care, streamlines medical workflows and supports medical research and analysis. This field merges technology and healthcare needs, focusing on key areas such as patient care and medical research.</p>
         <ul>
           <li><b>Electronic Medical Records (EMR) System:</b> Design and implementation of an EMR system for efficient management of patient records, including data storage, retrieval, and analysis.</li>
           <li><b>Medical Data Visualization:</b> Development of interactive data visualization tools for medical data analysis and exploration, allowing researchers and healthcare professionals to gain insights from complex datasets.</li>
@@ -152,25 +157,49 @@ healthOnlieImg.classList.add("displayImg")
           <li><b>Medical Imaging Software:</b>Development of image processing and analysis tools for medical imaging modalities, such as MRI, CT scans, and ultrasound, to aid in diagnosis and treatment planning.</li>
           <li><b>Research Data Management:</b> Implementation of data management systems and pipelines to handle large-scale medical research data, including data integration, cleaning, and analysis.</li>
 			  </ul>
-
+        
 			<h2><b>Technologies Role Used in Medicine</b></h2>
-        <p>Programming Languages: Python, JavaScript, Java, C++, C#. The use of software and applications in the field of medicine brings several benefits. Research indicates that these technologies enhance efficiency and accuracy by streamlining administrative tasks, automating processes, and minimizing human errors. They also improve patient care through better monitoring, diagnosis, and treatment planning. Additionally, software and applications enable seamless data integration, allowing healthcare providers to securely access and share patient information, promoting collaboration and continuity of care. These technologies also facilitate research and analytics, providing valuable insights for evidence-based medicine and decision-making.</p>
+      <p>Programming Languages: Python, JavaScript, Java, C++, C#. The use of software and applications in the field of medicine brings several benefits. Research indicates that these technologies enhance efficiency and accuracy by streamlining administrative tasks, automating processes, and minimizing human errors. They also improve patient care through better monitoring, diagnosis, and treatment planning. Additionally, software and applications enable seamless data integration, allowing healthcare providers to securely access and share patient information, promoting collaboration and continuity of care. These technologies also facilitate research and analytics, providing valuable insights for evidence-based medicine and decision-making.</p>
 
-        <h4><b>Summary</b></h4>
-        <p>The use of software and application programming in healthcare has led to significant advances in patient care. Technologies such as electronic health records and clinical decision support systems have increased efficiency and accuracy. However, challenges remain in data security and user experience. Despite this, emerging technologies such as artificial intelligence and precision medicine offer new opportunities for innovation and improved patient care. By recognizing limitations, utilizing advantages, and investing in emerging technologies, software engineer can bring about positive change in healthcare delivery.</p>
+      <h4><b>Summary</b></h4>
+      <p>The use of software and application programming in healthcare has led to significant advances in patient care. Technologies such as electronic health records and clinical decision support systems have increased efficiency and accuracy. However, challenges remain in data security and user experience. Despite this, emerging technologies such as artificial intelligence and precision medicine offer new opportunities for innovation and improved patient care. By recognizing limitations, utilizing advantages, and investing in emerging technologies, software engineer can bring about positive change in healthcare delivery.</p>
 
-      </article>
-      <aside>
-        <h3>Related</h3>
+    </article>
+    <aside>
+        <h2>Related</h2>
         <ul>
-          <li><a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpro0000449">Computer-enhanced practice</a></li>
-          <li><a href="https://ascpt.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cts.12884">Precision Medicine, AI, and the Future of Personalized 
-            Health Care</a></li>
-          <li><a href="https://link.springer.com/article/10.1007/s10742-020-00238-0">Standard electronic health record (EHR)</a></li>
-          <li><a href="https://www.sciencedirect.com/science/article/pii/S2666351121000383?via%3Dihub">Telemedicine for healthcare</a></li>
-          <li><a href="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-017-0110-7">Big healthcare data</a></li>
+          <li>
+            <a
+              href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fpro0000449"
+              >Computer-enhanced practice</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://ascpt.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/cts.12884"
+              >Precision Medicine, AI, and the Future of Personalized Health
+              Care</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://link.springer.com/article/10.1007/s10742-020-00238-0"
+              >Standard electronic health record (EHR)</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.sciencedirect.com/science/article/pii/S2666351121000383?via%3Dihub"
+              >Telemedicine for healthcare</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-017-0110-7"
+              >Big healthcare data</a
+            >
+          </li>
         </ul>
-
       </aside>
     </main>
     <footer>
@@ -178,4 +207,3 @@ healthOnlieImg.classList.add("displayImg")
     </footer>
   </body>
 </html>
-
