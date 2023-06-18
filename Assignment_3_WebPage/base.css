@@ -8,7 +8,7 @@ body {
   /* Add your CSS styles for dark mode here */
   
   body.dark-mode {
-    background-color: #1f1f1f;
+    background-color: #060606;
     color: #ffffff;
   }
 
@@ -16,8 +16,8 @@ body {
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(0, 0, 0);
     --bg-color: rgb(240, 240, 240);
-    --font-color: rgb(50, 50, 50);
-    --heading-color: rgb(30, 30, 30);
+    --font-color: rgb(32, 31, 78);
+    --heading-color: rgb(20, 20, 20);
   }
   
   [data-theme="dark"] {
@@ -31,7 +31,7 @@ body {
   body {
     background-color: var(--bg-color);
     color: var(--font-color);
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('img/background.jpg');
+    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('img/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
