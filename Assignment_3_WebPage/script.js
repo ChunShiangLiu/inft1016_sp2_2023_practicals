@@ -34,6 +34,15 @@ function toggleTheme() {
   root.setAttribute('data-theme', newTheme);
 }
 
+function changeImage(event) {
+  const button = event.target;
+  const imgSrc = button.getAttribute("data-imgsrc");
+  const imgAlt = button.textContent;
+
+  displayedImg.src = imgSrc;
+  displayedImg.alt = imgAlt;
+}
+
 function enableDarkMode() {
     document.body.classList.add("dark-mode");
     localStorage.setItem("mode", "dark");
