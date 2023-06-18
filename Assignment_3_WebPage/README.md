@@ -1,6 +1,6 @@
 # Assignment_3Web_Page
 
-This project focuses on the development of software applications and programming solutions in the field of medicine. It aims to leverage technology to improve healthcare delivery, enhance medical research, and facilitate data analysis in medical settings. The project encompasses various programming languages, frameworks, and tools to create innovative solutions for medical professionals, researchers, and patients.
+This text is bold(This project focuses on the development of software applications and programming solutions in the field of medicine. It aims to leverage technology to improve healthcare delivery, enhance medical research, and facilitate data analysis in medical settings. The project encompasses various programming languages, frameworks, and tools to create innovative solutions for medical professionals, researchers, and patients.)
 
 This is a medium heading. 
 
