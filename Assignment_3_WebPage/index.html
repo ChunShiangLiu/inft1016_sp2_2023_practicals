@@ -34,7 +34,7 @@
       </h1>
 
       <!-- Current date and time display -->
-      <p id="datetime"></p>
+      <p id="datetimeDisplay"></p>
 
       <!-- Theme toggle button -->
       <button onclick="toggleTheme()">Toggle Theme</button>
@@ -105,9 +105,7 @@
       function displayDateTime() {
         const now = new Date();
         const dateTimeString = now.toLocaleString();
-        document.querySelector(
-          "#datetime"
-        ).textContent = `Current Date and Time: ${dateTimeString}`;
+        document.querySelector("#datetimeDisplay").textContent = `Current Date and Time: ${dateTimeString}`;
       }
 
       // Event listener for theme toggle button
