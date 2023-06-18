@@ -107,12 +107,12 @@
         const dateTimeString = now.toLocaleString();
         document.querySelector("#datetimeDisplay").textContent = `Current Date and Time: ${dateTimeString}`;
       }
+      displayDateTime();
 
       // Event listener for theme toggle button
       document
         .querySelector("#theme-toggle")
         .addEventListener("click", toggleTheme);
-      displayDateTime();
 
       // Check if a theme preference is stored in local storage
       const storedTheme = localStorage.getItem("theme");

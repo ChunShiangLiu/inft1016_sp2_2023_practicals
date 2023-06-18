@@ -31,7 +31,7 @@ body {
   body {
     background-color: var(--bg-color);
     color: var(--font-color);
-    background: linear-gradient(rgba(243, 240, 240, 0.5), rgba(255, 255, 255, 0.4)), url('img/background.jpg');
+    background: linear-gradient(rgba(243, 240, 240, 0.5), rgba(255, 255, 255, 0.3)), url('img/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
