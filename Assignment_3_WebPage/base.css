@@ -23,7 +23,7 @@ body {
   [data-theme="dark"] {
     --primary-color: rgb(0, 0, 0);
     --secondary-color: rgb(255, 255, 255);
-    --bg-color: rgb(30, 30, 30);
+    --bg-color: rgb(11, 11, 11);
     --font-color: rgb(220, 220, 220);
     --heading-color: rgb(200, 200, 200);
   }
@@ -31,7 +31,7 @@ body {
   body {
     background-color: var(--bg-color);
     color: var(--font-color);
-    background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('img/background.jpg');
+    background: linear-gradient(rgba(243, 240, 240, 0.494), rgba(255, 255, 255, 0.4)), url('img/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
