@@ -20,7 +20,7 @@ The software and applications programming project in medicine is driven by the n
 ## Features
 - **Electronic Medical Records (EMR) System:** Design and implementation of an EMR system for efficient management of patient records, including data storage, retrieval, and analysis.
 * **Medical Data Visualization:** Development of interactive data visualization tools for medical data analysis and exploration, allowing researchers and healthcare professionals to gain insights from complex datasets.
-- **Machine Learning Applications:** Utilization of machine learning algorithms and techniques to develop predictive models for disease diagnosis, treatment planning, and patient monitoring.
+- **Telemedicine and remote patient monitoring systems:** This technology allows people to receive medical treatment from the comfort of their own homes, which was even more significant during the COVID-19 pandemic to adhere to social distancing measures.
 - **Healthcare Mobile Applications:** Creation of mobile applications for patients and healthcare providers, enabling remote monitoring, appointment scheduling, medication tracking, and health information access.
 * **Medical Imaging Software:** Development of image processing and analysis tools for medical imaging modalities, such as MRI, CT scans, and ultrasound, to aid in diagnosis and treatment planning.
 - **Research Data Management:** Implementation of data management systems and pipelines to handle large-scale medical research data, including data integration, cleaning, and analysis.
