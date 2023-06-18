@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Meta information -->
     <meta charset="UTF-8" />
     <title>Assignment 3 Web Page</title>
     <link rel="stylesheet" href="base.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- JavaScript code -->
     <script>
       // JavaScript code from Part 1
       // Place your JavaScript code here
     </script>
+
+    <!-- CSS styles -->
     <style id="theme">
       /* Light Mode CSS */
       body {
@@ -24,16 +28,23 @@
   </head>
   <body>
     <header>
+      <!-- Page heading and user name display -->
       <h1 id="heading">
         Welcome to Software and Applications Programming in Medicine, <span id="displayUserName"></span>!
       </h1>
 
+      <!-- Current date and time display -->
       <p id="datetime"></p>
+
+      <!-- Theme toggle button -->
       <button onclick="toggleTheme()">Toggle Theme</button>
+      
+      <!-- JavaScript file -->
       <script src="script.js"></script>
     </header>
     <main>
       <h2>Image Gallery</h2>
+      <!-- Displayed image -->
       <img
         height="333"
         id="displayImage"
@@ -41,6 +52,7 @@
         {# src="https://ihpc.is/wp-content/uploads/2021/03/Health-and-Medicine-2-1024x333.png" #}
         alt=""
       />
+      <!-- Image photographer -->
       <p id="photographer">Software and Applications Programming in Medicine</p>
       <h2>Image Selections:</h2>
       <button
@@ -89,7 +101,7 @@
           : "Light Mode";
         localStorage.setItem("theme", theme);
       }
-
+      // Function to display current date and time
       function displayDateTime() {
         const now = new Date();
         const dateTimeString = now.toLocaleString();
@@ -115,6 +127,7 @@
 
     <nav>
       <ul>
+        <!-- Navigation links -->
         <li>
           <a
             href="file:///C:/Users/Jason/OneDrive/Desktop/inft1016_sp2_2023_practicals-main/inft1016_sp2_2023_practicals-1/Assignment_3_WebPage/index.html"
@@ -132,6 +145,7 @@
       </ul>
 
       <div>
+        <!-- User name input and apply button -->
         <input type="text" id="userName" placeholder="Enter your name!" />
         <button onclick="changeText()" type="submit">Apply!</button>
       </div>
@@ -141,7 +155,10 @@
       <article>
         <h1><b>Software and Applications Programming in Medicine</b></h1>
 
-        <blockquote>" Fun fact: We must have equity and improving the health of everyone as explicit goals and then build the systems toward those goals."</blockquote>                
+        <!-- Quotation -->
+        <blockquote>
+          " Fun fact: We must have equity and improving the health of everyone as explicit goals and then build the systems toward those goals."
+        </blockquote>                
 
         <h2><b>Introduction</b></h2>
 
